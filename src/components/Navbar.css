@@ -1,0 +1,79 @@
+.navbar {
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    cursor: pointer;
+    letter-spacing: -0.025em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links li {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.nav-links li:hover,
+.nav-links li.active {
+    color: var(--primary);
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    position: relative;
+    color: var(--text-main);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.cart-btn:hover {
+    background-color: var(--background);
+    color: var(--primary);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: var(--secondary);
+    color: white;
+    font-size: 0.7rem;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid var(--surface);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* simple mobile hiding for now, can implement hamburger later */
+    }
+}
